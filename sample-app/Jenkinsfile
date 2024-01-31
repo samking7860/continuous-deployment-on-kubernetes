@@ -1,13 +1,14 @@
 pipeline {
 
-  environment {
+ environment {
     PROJECT = "samad-410909"
     APP_NAME = "gceme"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "jenkins-cd"
-    CLUSTER_ZONE = "us-east1-d"
+    CLUSTER = "dev-gke"
+    CLUSTER_ZONE = "us-central1-a"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
-    JENKINS_CRED = "${PROJECT}"
+    JENKINS_CRED = "15d9f37f-5e21-40a5-9e39-d46230c8dc1b"
+
   }
 
   agent {
